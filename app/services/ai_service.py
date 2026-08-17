@@ -45,12 +45,12 @@ class AIService:
         # Yeni kullanıcı mesajını dizinin sonuna ekliyoruz
         messages.append({"role": "user", "content": mesaj})
 
-        payload = {
-            "model": "llama-3.1-8b-instant",
-            "messages": messages,
-            "temperature": 0.7,
-            "max_tokens": 500
-        }
+        payload = { 
+    "model": "openai/gpt-oss-20b", 
+    "messages": messages, 
+    "temperature": 0.7, 
+    "max_tokens": 500 
+}
 
         try:
             # API'ye POST isteği atılıyor
